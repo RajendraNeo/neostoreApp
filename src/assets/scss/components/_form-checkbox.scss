@@ -1,0 +1,74 @@
+.form-check-input{
+    border: 1px solid $primary;
+    border-radius: 2px;
+    &:checked {
+        background-color: $primary;
+        border-color: $primary;
+    }
+    &:focus {
+        border-color: $primary;
+        outline: 0;
+        box-shadow: none;
+    }  
+    &.blue{
+        background-color: #5E37FF;
+        border: 1px solid #5E37FF;
+        &:checked {
+            background-color: #5E37FF;
+            border-color: #5E37FF;
+        }
+        &:focus {
+            border-color: #5E37FF;
+        }  
+    }  
+    &.orange{
+        background-color: #FF9437;
+        border: 1px solid #FF9437;
+        &:checked {
+            background-color: #FF9437;
+            border-color: #FF9437;
+        }
+        &:focus {
+            border-color: #FF9437;
+        }  
+    }
+    &.brown{
+        background-color: #57453B;
+        border: 1px solid #57453B;
+        &:checked {
+            background-color: #57453B;
+            border-color: #57453B;
+        }
+        &:focus {
+            border-color: #57453B;
+        }  
+    }
+    &.green{
+        background-color: #157911;
+        border: 1px solid #157911;
+        &:checked {
+            background-color: #157911;
+            border-color: #157911;
+        }
+        &:focus {
+            border-color: #157911;
+        }  
+    }
+    &.cream{
+        background-color: #F5EEE1;
+        border: 1px solid #F5EEE1;
+        &:checked {
+            background-color: #F5EEE1;
+            border-color: #F5EEE1;
+        }
+        &:focus {
+            border-color: #F5EEE1;
+        }  
+    }
+}
+
+// background: #5E37FF;
+// background: #FF9437;
+// background: #57453B;
+// background: #157911;
+// background: #F5EEE1;

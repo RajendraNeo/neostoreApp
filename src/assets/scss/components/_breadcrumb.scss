@@ -1,0 +1,23 @@
+.breadcrumb{
+    .breadcrumb-item {
+        font-family: 'Gotham';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        a{
+            color: #111111;
+        }
+        + {
+            .breadcrumb-item {
+                &::before {
+                    color: $primary;
+                    content: var(--bs-breadcrumb-divider, "|") /* rtl: var(--bs-breadcrumb-divider, "/") */;
+                }
+            }
+        }
+        &.active {
+            color: $primary;
+        }  
+    }
+}

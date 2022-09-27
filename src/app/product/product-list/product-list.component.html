@@ -1,0 +1,228 @@
+<section>
+    <div class="container">
+       <div class="d-flex justify-content-end my-4">
+          <ul class="d-flex align-items-center mb-0">
+             <li class="d-flex align-items-center me-3">
+                <label class="flex-shrink-0 me-2">Sort By:</label>
+                <select class="form-select" aria-label="Sort by">
+                  <option selected>Best Match</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+             </li>
+             <li>
+                <label class="me-2">View</label>
+                <a (click)="viewGridList()" [ngClass]="{'classname' : grid}" class="me-3 gridList"><i class="fas fa-th-large"></i></a>
+                <a (click)="viewGridList()" [ngClass]="{'classname' : !grid}" class="gridList"><i class="fas fa-list"></i></a>
+             </li>
+          </ul>
+       </div>
+       <div class="row filter-product-data">
+          <div class="col-md-4">
+             <div class="product-brands mb-4">
+                <h5 class="filter-title">Product Brand</h5>
+             <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="coaster-Furniture">
+                <label class="form-check-label" for="coaster-Furniture" >Coaster Furniture</label>
+             </div> 
+             <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="fusion-Dot-High">
+                <label class="form-check-label" for="fusion-Dot-High" >Fusion Dot High Fashion</label>
+             </div>   
+             <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="Unique-Furnitture-Restor">
+                <label class="form-check-label" for="Unique-Furnitture-Restor" >Unique Furnitture Restor</label>
+             </div>  
+             <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="Dream-Furnitture-Flipping">
+                <label class="form-check-label" for="Dream-Furnitture-Flipping" >Dream Furnitture Flipping</label>
+             </div> 
+             <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="Young-Repurposed">
+                <label class="form-check-label" for="Young-Repurposed" >Young Repurposed</label>
+             </div>
+             <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="Green-DIY-furniture">
+                <label class="form-check-label" for="Green-DIY-furniture" >Green DIY furniture</label>
+             </div>
+             </div>
+             <div class="discount-Offer mb-4">
+                <h5 class="filter-title">Discount Offer</h5>
+             <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="cashback">
+                <label class="form-check-label" for="cashback" >20% Cashback</label>
+             </div> 
+             <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="cashback-Offer">
+                <label class="form-check-label" for="cashback-Offer" >5% Cashback Offer</label>
+             </div>   
+             <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="discount-Offer">
+                <label class="form-check-label" for="discount-Offer" >25% Discount Offer</label>
+             </div>  
+             </div>
+             <div class="rating-Item mb-4">
+                <h5 class="filter-title">Rating Item</h5>
+             <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="star-rating-5">
+                <label class="form-check-label" for="star-rating-5" >
+                  <span class="me-1">
+                   <i class="icon-star-icon me-1"></i>
+                   <i class="icon-star-icon me-1"></i>
+                   <i class="icon-star-icon me-1"></i>
+                   <i class="icon-star-icon me-1"></i>
+                   <i class="icon-star-icon me-1"></i>
+                  </span>
+                  <span>(2341)</span>
+                </label>
+             </div> 
+             <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="star-rating-4">
+                <label class="form-check-label" for="star-rating-4" >
+                  <span class="me-1">
+                   <i class="icon-star-icon me-1"></i>
+                   <i class="icon-star-icon me-1"></i>
+                   <i class="icon-star-icon me-1"></i>
+                   <i class="icon-star-icon me-1"></i>
+                   <i class="icon-star-icon me-1"></i>
+                  </span>
+                  <span>(1726)</span>
+                </label>
+             </div> 
+             <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="star-rating-3">
+                <label class="form-check-label" for="star-rating-3" >
+                  <span class="me-1">
+                   <i class="icon-star-icon me-1"></i>
+                   <i class="icon-star-icon me-1"></i>
+                   <i class="icon-star-icon me-1"></i>
+                   <i class="icon-star-icon me-1"></i>
+                   <i class="icon-star-icon me-1"></i>
+                  </span>
+                  <span>(258)</span>
+                </label>
+             </div> 
+             <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="star-rating-2">
+                <label class="form-check-label" for="star-rating-2" >
+                  <span class="me-1">
+                   <i class="icon-star-icon me-1"></i>
+                   <i class="icon-star-icon me-1"></i>
+                   <i class="icon-star-icon me-1"></i>
+                   <i class="icon-star-icon me-1"></i>
+                   <i class="icon-star-icon me-1"></i>
+                  </span>
+                  <span>(26)</span>
+                </label>
+             </div>   
+             <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="star-rating-1">
+                <label class="form-check-label" for="star-rating-1" >
+                  <span class="me-1">
+                   <i class="icon-star-icon me-1"></i>
+                   <i class="icon-star-icon me-1"></i>
+                   <i class="icon-star-icon me-1"></i>
+                   <i class="icon-star-icon me-1"></i>
+                   <i class="icon-star-icon me-1"></i>
+                  </span>
+                  <span>(6)</span>
+                </label>
+             </div>
+             </div>
+             <div class="price-Filter mb-4">
+                <h5 class="filter-title">Price Filter</h5>
+             <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="under-1500">
+                <label class="form-check-label" for="under-1500" >
+                   ₹0.00 - ₹1500.00
+                </label>
+             </div> 
+             <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="under-3500">
+                <label class="form-check-label" for="under-3500" >
+                   ₹1500.00 - ₹3500.00
+                </label>
+             </div> 
+             <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="under-5000">
+                <label class="form-check-label" for="under-5000" >
+                   ₹3500.00 - ₹5000.00
+                </label>
+             </div> 
+             <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="high-5000">
+                <label class="form-check-label" for="high-5000" >
+                   ₹5000.00 +
+                </label>
+             </div> 
+             <form class="mt-3 mb-5 w-50">
+                <input class="form-control py-1" type="search" placeholder="Search" aria-label="Search">
+             </form>
+             </div>
+             <div class="filter-By-Color mb-4 w-75">
+                <h5 class="filter-title">Filter By Color</h5>
+             <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input blue" id="blue">
+                <label class="form-check-label" for="blue" >Blue</label>
+             </div> 
+             <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input orange" id="orange">
+                <label class="form-check-label" for="orange" >Orange</label>
+             </div>   
+             <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input brown" id="brown">
+                <label class="form-check-label" for="brown" >Brown</label>
+             </div>  
+             <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input green" id="green">
+                <label class="form-check-label" for="green" >Green</label>
+             </div>   
+             <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input cream" id="cream">
+                <label class="form-check-label" for="cream" >Cream</label>
+             </div> 
+             </div>
+          </div>
+          <div class="col-md-8">
+             <div class="row">
+                <div [ngClass]="grid ? 'col-4' : 'col-6'" class="mb-4" *ngFor="let productItem of product; index as i" [routerLink]="['/product/product-list',productItem.id]">
+                   <figure >
+                     <!-- [routerLink]="['/product/product-list',productItem.id]" -->
+                      <img [src]="productItem.imgPath" alt="sofas img" class="img-fluid" [ngClass]="grid ? 'd-block' : 'd-none'">
+                      <figcaption class="figure-caption"> 
+                         <div class="selected-items">
+                             <h5 class="mb-0"> {{productItem.productTitle}}</h5>
+                             <h6 class="mb-0"><span>{{productItem.pdActualPrice | currency:'INR'}} </span> <span class="text-decoration-line-through text-red">{{productItem.pdDiscountPrice | currency:'INR'}}</span></h6>
+                         </div>
+                      </figcaption>   
+                   </figure>
+                </div>
+             </div>
+          </div>
+       </div>
+       <!-- pagination -->
+       <div class="d-flex justify-content-end"> 
+          <nav aria-label="Page navigation example">
+             <ul class="pagination">
+               <li class="page-item">
+                 <a class="page-link" href="javascript:void(0)" aria-label="Previous">
+                   <span aria-hidden="true">&#60;</span>
+                 </a>
+               </li>
+               <li class="page-item active"><a class="page-link" href="javascript:void(0)">1</a></li>
+               <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+               <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+               <li class="page-item"><a class="page-link" href="javascript:void(0)">4</a></li>
+               <li class="page-item"><a class="page-link" href="javascript:void(0)">5</a></li>
+               <li class="page-item"><a class="page-link" href="javascript:void(0)">6</a></li>
+               <li class="page-item">
+                 <a class="page-link" href="javascript:void(0)" aria-label="Next">
+                   <span aria-hidden="true">&#62;</span>
+                 </a>
+               </li>
+             </ul>
+           </nav>
+       </div>
+    </div>
+ </section>

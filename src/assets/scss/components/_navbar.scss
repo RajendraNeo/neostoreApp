@@ -1,0 +1,17 @@
+.navbar{
+    .navbar-brand{
+        @include fontsize(30px, 700, $primary);
+        line-height: rem(45);
+        letter-spacing: rem(0.5);
+        cursor: pointer;
+    }
+    .navbar-nav{
+        .nav-item{
+            margin-right: rem(15);
+            .nav-link{
+                @include fontsize(14px, 300, $text-dark-color);
+                line-height: 17px;
+            }
+        }
+    }
+}

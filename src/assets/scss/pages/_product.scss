@@ -1,0 +1,70 @@
+.bg-breadcrumb{
+    background-image: url('../../images/png/sofas-under-3.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 153px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    .bg-overlay{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        inset: 0;
+        // background-color: rgba(0, 0, 0, 0.78);
+        background-image: url('../../images/png/bg-overlay.png');
+        z-index: -1;
+    }
+}
+
+.selected-items{
+    h5{
+        font-family: 'Gotham';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    h6{
+        font-family: 'Gotham';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        .text-red{
+            color: #E91B1A;
+        }
+    }
+}
+
+.filter-title{
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    position: relative;
+    margin-bottom: 15px;
+    &::after{
+       content: "";
+       position: absolute;
+       background-color: $color-black;
+       width: 26%;
+       height: 1.5px;
+       display: block;
+       left: 2%;
+    }
+}
+
+.filter-product-data{
+    .form-check{
+        label{
+            font-family: 'Gotham';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            color: #7F7F7F;
+        }
+    }
+}

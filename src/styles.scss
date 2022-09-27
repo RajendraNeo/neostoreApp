@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import "/src/assets/scss/main.scss";
+
+
+@media (max-width: 767.98px) { 
+    .setsForHome{
+        .sofaSets{
+            &__content{
+                width: 340px;
+            }
+        }
+    }        
+}
+@media (max-width: 600px) { 
+    .setsForHome{
+        .sofaSets{
+            &__content{
+               display: none;
+            }
+        }
+    }        
+}

@@ -1,0 +1,41 @@
+/*Font px into rem mixins*/
+@function rem($target, $context:$base-size){
+  @return($target/$context) * 1rem;
+}
+/*Font mixins*/
+@mixin fontsize($font-size, $font-weight, $color) {
+  @if ($font-size != null) {
+      font-size: ($font-size); 
+  }
+  @if ($font-weight != null) {
+      font-weight: ($font-weight);
+  }
+  @if ($color != null) {
+      color: ($color);
+  }
+}
+/*Responsive mixins*/
+$breakpoints: (
+  'custom-small-mobile-max': (max-width: 359px),
+  'portrait-mobile-max': (max-width: 575px),
+  'mobile-min': (min-width: 576px),
+  'mobile-max': (max-width: 767px),
+  'ipad-min': (min-width: 768px),
+  'ipad-max': (max-width: 991px),
+  'desktop-min': (min-width: 992px),
+  'desktop-max': (max-width: 1199px),
+  'large-desktop-min': (min-width: 1200px),
+  'medium-large-desktop-min': (min-width: 1366px),
+  'medium-large-desktop-max': (max-width: 1400px),
+);
+
+@mixin breakpoint($name) {
+    @if map-has-key($breakpoints, $name) {
+      @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+  @else {
+    @warn "Couldn't find a breakpoint named `#{$name}`.";
+  }
+}	

@@ -1,0 +1,30 @@
+.pagination{
+    .page-item{
+        .page-link {
+            position: relative;
+            display: block;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 15px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #1C1E20;
+            text-decoration: none;
+            background-color: #fff;
+            margin-right: 10px;
+            border: none; 
+            border-radius: 2px;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }  
+        &.active{
+            .page-link {
+                z-index: 3;
+                color: #fff;
+                background-color: $text-red-color;
+                border-color: $text-red-color;
+                outline: none;
+            }
+        }      
+    }
+}

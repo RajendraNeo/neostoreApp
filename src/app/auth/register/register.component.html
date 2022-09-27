@@ -1,0 +1,65 @@
+<div class="login">
+    <h4 class="text-center login__title mb-5">Sign up</h4>
+    <div class="row">
+        <div class="col-12">
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <label class="form-label font-14">New Account Register</label>
+                <div class="mb-2">
+                    <input type="text" class="form-control" placeholder="First Name" formControlName="firstName">
+                    <small class="form-text text-danger" *ngIf="firstName.errors?.['required'] && (firstName.touched || firstName.dirty)">
+                        First Name is Required.
+                    </small>
+                    <small class="form-text text-danger" *ngIf="firstName.errors?.['minlength'] && (firstName.touched || firstName.dirty)">
+                        First Name is too Short.
+                    </small>
+                    <small class="form-text text-danger" *ngIf="firstName.errors?.['pattern'] && (firstName.touched || firstName.dirty)">
+                        First Name should be start with Alphabet
+                    </small>
+                </div>
+                <div class="mb-2">
+                    <input type="text" class="form-control" placeholder="Last Name" formControlName="secondName">
+                    <small class="form-text text-danger" *ngIf="secondName.errors?.['required'] && (secondName.touched || secondName.dirty)">
+                        Last Name is Required.
+                    </small>
+                    <small class="form-text text-danger" *ngIf="secondName.errors?.['minlength'] && (secondName.touched || secondName.dirty)">
+                        Last Name is too Short.
+                    </small>
+                    <small class="form-text text-danger" *ngIf="secondName.errors?.['pattern'] && (secondName.touched || secondName.dirty)">
+                        Last Name should be start with Alphabet
+                    </small>
+                </div>
+                <div class="mb-2">
+                  <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Email addresss" formControlName="email">
+                  <small class="form-text text-danger" *ngIf="email.errors?.['required'] && (email.touched || email.dirty)">
+                    Email is Required.
+                  </small>
+                  <small class="form-text text-danger" *ngIf="email.errors?.['email'] && (email.touched || email.dirty)">
+                    Please Enter Valid Email
+                  </small>
+                </div>
+                <div class="mb-3">
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" formControlName="password">
+                  <small class="form-text text-danger" *ngIf="password.errors?.['required'] && (password.touched || password.dirty)">
+                    Password is Required.
+                  </small>
+                  <small class="form-text text-danger" *ngIf="password.errors?.['minlength'] || password.errors?.['maxlength'] && (password.touched || password.dirty)">
+                    Password should be at least 6 and at the max 15 characters long.
+                  </small>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1" >
+                    <label class="form-check-label" for="exampleCheck1" >I agree to the terms and conditions.</label>
+                    <!-- <small class="form-text text-danger" *ngIf="terms.errors?.['required'] && (terms.touched || terms.dirty)">
+                        Terms and conditions is Required.
+                    </small> -->
+                </div>
+                <div class="text-center mb-4">
+                    <button type="submit" class="btn btn--red w-75" [disabled]="registerForm.invalid">Continue</button>
+                </div>
+                <div class="sign-up-link text-center">
+                    <span class="me-1">Already have an account?</span><a class="sign-up-anchor" routerLink="/auth/login">Log In</a>
+                </div>
+              </form>
+        </div>
+    </div>
+</div>

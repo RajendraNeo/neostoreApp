@@ -1,0 +1,417 @@
+<app-header></app-header>
+<main>
+   <section class="bg-banner">
+       <div class="container">
+        <owl-carousel-o [options]="customOptions">
+            <ng-template carouselSlide>
+                <div class="row">
+                    <div class="col-md-5 banner">
+                        <h2 class="banner__text">Furniture
+                           <span class="d-block">2022</span>
+                        </h2>
+                        <h5 class="banner__middleText">NEW ARRIVALS</h5>
+                        <h1 class="banner__lightText">Spring 
+                           <span class="d-block">Collection</span> 
+                        </h1>
+                        <div class="mb-5 pb-3">
+                            <button class="btn btn--red">Shop now</button>
+                        </div>
+                    </div>
+                    <div class="col-md-7"></div>
+                </div>
+            </ng-template>  
+            <ng-template carouselSlide>
+                <div class="row">
+                    <div class="col-md-5 banner">
+                        <h2 class="banner__text">Furniture
+                           <span class="d-block">2022</span>
+                        </h2>
+                        <h5 class="banner__middleText">NEW ARRIVALS</h5>
+                        <h1 class="banner__lightText">Spring 
+                           <span class="d-block">Collection</span> 
+                        </h1>
+                        <div class="mb-5 pb-3">
+                            <button class="btn btn--red">Shop now</button>
+                        </div>
+                    </div>
+                    <div class="col-md-7"></div>
+                </div>
+            </ng-template>  
+            <ng-template carouselSlide>
+                <div class="row">
+                    <div class="col-md-5 banner">
+                        <h2 class="banner__text">Furniture
+                           <span class="d-block">2022</span>
+                        </h2>
+                        <h5 class="banner__middleText">NEW ARRIVALS</h5>
+                        <h1 class="banner__lightText">Spring 
+                           <span class="d-block">Collection</span> 
+                        </h1>
+                        <div class="mb-5 pb-3">
+                            <button class="btn btn--red">Shop now</button>
+                        </div>
+                    </div>
+                    <div class="col-md-7"></div>
+                </div>
+            </ng-template>  
+            <ng-template carouselSlide>
+                <div class="row">
+                    <div class="col-md-5 banner">
+                        <h2 class="banner__text">Furniture
+                           <span class="d-block">2022</span>
+                        </h2>
+                        <h5 class="banner__middleText">NEW ARRIVALS</h5>
+                        <h1 class="banner__lightText">Spring 
+                           <span class="d-block">Collection</span> 
+                        </h1>
+                        <div class="mb-5 pb-3">
+                            <button class="btn btn--red">Shop now</button>
+                        </div>
+                    </div>
+                    <div class="col-md-7"></div>
+                </div>
+            </ng-template>  
+        </owl-carousel-o>
+       </div>
+   </section>
+   <section class="column-padding">
+      <div class="container">
+        <div class="show-department mb-5">
+            <div class="heading-block">
+                <h3 class="block-title text-center mb-0">Shop by Department</h3>
+                <p class="block-para text-center">Sitewide Discounts & Savings of up to 25%</p>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-2 col-md-3 col-sm-4 col mb-3 mb-lg-0">
+                    <div class="icon-container">
+                        <i class="icon-star-icon"></i>
+                        <h5>Star</h5>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col mb-3 mb-lg-0">
+                    <div class="icon-container">
+                        <i class="icon-ic_chair"></i>
+                        <h5>Chair</h5>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col mb-3 mb-lg-0">
+                    <div class="icon-container active">
+                        <i class="icon-star-icon"></i>
+                        <h5>Star</h5>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col mb-3 mb-lg-0">
+                    <div class="icon-container">
+                        <i class="icon-ic_sofa"></i>
+                        <h5>Sofa</h5>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col mb-3 mb-lg-0">
+                    <div class="icon-container">
+                        <i class="icon-ic_chair"></i>
+                        <h5>Chair</h5>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col mb-3 mb-lg-0">
+                    <div class="icon-container">
+                        <i class="icon-ic_lamb"></i>
+                        <h5>Lamb</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="trending pt-3 mb-5">
+            <div class="heading-block">
+                <h3 class="block-title text-center mb-0">TRENDING</h3>
+                <p class="block-para text-center">Explore a wide range of affordable, well-designed and functional home furnishing solutions</p>
+            </div>
+            <div class="mt-5 row row-cols-1 row-cols-2 row-cols-lg-5 row-cols-md-3 trending__block">
+                <div class="col" *ngFor="let item of trend">
+                    <figure class="figure">
+                        <img src="{{item.image}}" alt="" class="img-fluid">
+                        <figcaption class="figure-caption mt-2"> 
+                            <span class="d-block"> {{item.desc}}</span>
+                            <span>{{item.price | currency : 'INR'}}</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div class="specail-offer border border-danger p-3">
+            <div class="bg-white d-flex flex-wrap w-50 px-2" style="margin-top: -36px;">
+                <h3 class="block-title text-center mb-0 me-3">special offer</h3>
+                <div class="p-2 bg-red text-white">end in 2d : 5h : 26m : 2s</div>
+            </div>
+            <div class="row specail-offer__items mt-4">
+                <div class="col-md-4">
+                    <h5>White Wooden Chair</h5>
+                    <h6>₹1200.00</h6>
+                    <figure class="figure mb-0 w-100">
+                         <img src="/assets/images/png/white-Wooden-Chair-1.png" alt="White Wooden Chair-1" class="my-3 img-fluid w-100">
+                          <figcaption class="figure-caption"> 
+                             <div class="progress progress-sm mb-2" style="height: 0.51rem;">
+                                 <div class="progress-bar" role="progressbar" style="width: 50%;    background-color: #5DBE6B;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                             </div>
+                             <div class="d-flex justify-content-between available-in">
+                                 <span class="font-14">Available: 289</span>
+                                 <div class="d-flex align-items-center">
+                                     <i class="icon-star-icon me-1"></i>
+                                     <i class="icon-star-icon me-1"></i>
+                                     <i class="icon-star-icon me-1"></i>
+                                     <i class="icon-star-icon me-1"></i>
+                                     <i class="icon-star-icon me-1"></i>
+                                 </div>
+                             </div>
+                         </figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4">
+                 <h5>White Wooden Chair</h5>
+                 <h6>₹1200.00</h6>
+                 <figure class="figure mb-0 w-100">
+                      <img src="/assets/images/png/white-Wooden-Chair-2.png" alt="White Wooden Chair-2" class="my-3 img-fluid w-100">
+                       <figcaption class="figure-caption"> 
+                          <div class="progress progress-sm mb-2" style="height: 0.51rem;">
+                              <div class="progress-bar" role="progressbar" style="width: 50%;    background-color: #5DBE6B;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <div class="d-flex justify-content-between available-in">
+                              <span class="font-14">Available: 289</span>
+                              <div class="d-flex align-items-center">
+                                  <i class="icon-star-icon me-1"></i>
+                                  <i class="icon-star-icon me-1"></i>
+                                  <i class="icon-star-icon me-1"></i>
+                                  <i class="icon-star-icon me-1"></i>
+                                  <i class="icon-star-icon me-1"></i>
+                              </div>
+                          </div>
+                      </figcaption>
+                  </figure>
+                </div>
+                <div class="col-md-4">
+                 <h5>White Wooden Chair</h5>
+                 <h6>₹1200.00</h6>
+                 <figure class="figure mb-0 w-100">
+                      <img src="/assets/images/png/white-Wooden-Chair-3.png" alt="White Wooden Chair-3" class="my-3 img-fluid w-100">
+                       <figcaption class="figure-caption"> 
+                          <div class="progress progress-sm mb-2" style="height: 0.51rem;">
+                              <div class="progress-bar" role="progressbar" style="width: 50%;    background-color: #5DBE6B;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <div class="d-flex justify-content-between available-in">
+                              <span class="font-14">Available: 289</span>
+                              <div class="d-flex align-items-center">
+                                  <i class="icon-star-icon me-1"></i>
+                                  <i class="icon-star-icon me-1"></i>
+                                  <i class="icon-star-icon me-1"></i>
+                                  <i class="icon-star-icon me-1"></i>
+                                  <i class="icon-star-icon me-1"></i>
+                              </div>
+                          </div>
+                      </figcaption>
+                  </figure>
+                </div>
+            </div>
+        </div>
+      </div> 
+   </section>
+   <section class="column-padding">
+       <div class="container">
+           <div class="row mb-5 setsForHome">
+               <div class="col-lg-5 col-md-6 col-12 sofaSets position-relative">
+                   <img src="/assets/images/png/sofa-sets.png" alt="sofa sets" class="img-fluid h-100">
+                   <div class="sofaSets__content">
+                      <h5>SOFA & CHAIRS </h5>
+                      <h2>Need it fast?</h2>
+                      <h4>See what’s in stock! </h4>
+                      <a href="javascript:void(0);">Shop now</a>
+                   </div>
+               </div>
+               <div class="col-lg-7 col-md-6 col-12">
+                   <div class="row home-sets">
+                      <div class="col-md-6 mb-3" *ngFor="let item of discount">
+                        <figure class="figure mb-0 position-relative w-100">
+                            <img src="{{item.image}}" alt="{{item.heading}}" class="img-fluid mb-2 w-100">
+                            <div class="discount_off">
+                                <span>{{item.discount}} <span class="d-block">OFF</span></span>
+                            </div>
+                            <figcaption class="figure-caption"> 
+                               <h5 class="mb-0">{{item.heading}}</h5>
+                               <p class="mb-0">{{item.desc}}</p>
+                            </figcaption>
+                        </figure>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <div class="furniture mb-5">
+                <div class="heading-block">
+                    <h3 class="block-title text-center mb-0">FURNITURE FOR EVERY BUDGET</h3>
+                    <p class="block-para text-center">From glam vibes to laid-back comfort, these sofas all have one thing in common—and that’s amazing value.                    </p>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-4" *ngFor="let item of budget">
+                        <figure class="figure">
+                            <img src="{{item.image}}" alt="{{item.heading}}" class="img-fluid">
+                            <figcaption class="align-items-center d-flex figure-caption justify-content-between p-3 specail-offer"> 
+                                <div class="specail-offer__items">
+                                    <h5 class="mb-0"> {{item.heading}}</h5>
+                                    <h6 class="mb-0">{{item.price | currency : 'INR'}}</h6>
+                                </div>
+                                <div>
+                                    <button class="btn btn--red">Shop now</button>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>    
+           </div>
+           <div class="bestSellers mb-5">
+                <div class="heading-block">
+                    <h3 class="block-title text-center mb-0">Bestsellers</h3>
+                    <p class="block-para text-center">Sitewide Discounts & Savings of up to 25%     </p>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-4" *ngFor="let item of bestSeller">
+                        <div class="card border-0 mb-4">
+                            <div class="card-img-top d-flex align-items-center">
+                                <div>
+                                    <img class="img-fluid" src="{{item.image}}" alt="{{item.heading}}">
+                                </div>
+                                <div class="ps-2 product-desp">
+                                    <span class="mb-2 d-block">
+                                        <i class="icon-star-icon me-1"></i>
+                                        <i class="icon-star-icon me-1"></i>
+                                        <i class="icon-star-icon me-1"></i>
+                                        <i class="icon-star-icon me-1"></i>
+                                        <i class="icon-star-icon me-1"></i>
+                                    </span>
+                                    <h6>{{item.heading}}</h6>
+                                    <p><span class="text-decoration-line-through">{{ item.oldPrice | currency : 'INR'}}</span> {{ item.newPrice | currency : 'INR'}}</p>
+                                    <div class="d-flex">
+                                        <div class="border p-2 me-2">
+                                            <img src="/assets/images/svg-icon/heart-icon.svg" alt="heart icon" class="img-fluid">
+                                        </div>
+                                        <div class="border p-2">
+                                            <img src="/assets/images/svg-icon/u-icon.svg" alt="heart icon" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+       </div>
+   </section>
+   <section class="column-padding mb-0">
+       <div class="container">
+           <div class="row mb-5">
+               <div class="col-md-3 col-12 position-relative">
+                   <img src="/assets/images/png/sofa-style.png" alt="sofa style" class="img-fluid h-100 w-100">
+                   <div class="position-absolute text-white text-center new_arrivals">
+                       <p class="mb-1">NEW ARRIVALS</p>
+                       <h6 class="mb-3">Sofa Style 2021</h6>
+                       <a class="text-decoration-underline text-white">Shop now</a>
+                   </div>
+               </div>
+               <div class="col-md-6 col-12 position-relative">
+                <img src="/assets/images/png/perfect-home-collections.png" alt="perfect-home-collections" class="img-fluid h-100 w-100">
+                <div class="position-absolute text-white text-center new_arrivals">
+                    <p class="mb-1">NEW ARRIVALS</p>
+                    <h6 class="mb-3">Perfect fit for your home</h6>
+                    <a class="text-decoration-underline text-white">Shop now</a>
+                </div>
+               </div>
+               <div class="col-md-3 col-12 position-relative">
+                <img src="/assets/images/png/new-collections.png" alt="new-collections" class="img-fluid h-100 w-100">
+                <div class="position-absolute text-white text-center new_arrivals">
+                    <p class="mb-1">NEW ARRIVALS</p>
+                    <h6 class="mb-3">New Collection </h6>
+                    <a class="text-decoration-underline text-white">Shop now</a>
+                </div>
+               </div>
+           </div>
+           <div class="fromOurBlog mb-5">
+                <div class="heading-block">
+                    <h3 class="block-title text-center mb-0">From Our Blog</h3>
+                    <p class="block-para text-center">See how our customers have styled davici products in their home
+                    </p>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-4 col-sm-6 col-12 mb-3 mb-md-0" *ngFor="let item of ourBlog">
+                        <div class="card ourBlog">
+                            <img src="{{item.image}}" alt="{{item.subHeading}}" class="card-img-top">
+                            <div class="ourBlog__date">
+                                <span class="date d-block">28</span><span class="month">Nov</span>
+                            </div>
+                            <div class="card-body text-center ourBlog__content">
+                              <h5 class="card-title">{{item.subHeading}} </h5>
+                              <h6 class="mb-0">{{item.heading}} </h6>
+                            </div>
+                            <div class="card-footer text-center bg-transparent border-top">
+                                <p> {{item.desc }} </p>
+                                <a href="javascript:void(0);">Read More</a>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+           </div>
+           <div class="neostore-furniture mb-5">
+            <div class="heading-block">
+                <h3 class="block-title text-center mb-0">#NEOSTOREfurniture</h3>
+                <p class="block-para text-center">Use #neostore on your post for a chance to be featured!
+                </p>
+            </div>
+           </div>
+       </div>
+       <div class="furniture-carousel">
+        <owl-carousel-o [options]="customOptions2">
+            <ng-template carouselSlide>
+                <img src="/assets/images/png/carousel2-1.png" alt="furniture img">
+            </ng-template>  
+            <ng-template carouselSlide>
+                <img src="/assets/images/png/carousel2-2.png" alt="furniture img">
+            </ng-template>  
+            <ng-template carouselSlide>
+                <img src="/assets/images/png/carousel2-3.png" alt="furniture img">
+            </ng-template> 
+            <ng-template carouselSlide>
+                <img src="/assets/images/png/carousel2-1.png" alt="furniture img">
+            </ng-template>  
+            <ng-template carouselSlide>
+                <img src="/assets/images/png/carousel2-2.png" alt="furniture img">
+            </ng-template>  
+            <ng-template carouselSlide>
+                <img src="/assets/images/png/carousel2-3.png" alt="furniture img">
+            </ng-template> 
+            <ng-template carouselSlide>
+                <img src="/assets/images/png/carousel2-2.png" alt="furniture img">
+            </ng-template>  
+            <ng-template carouselSlide>
+                <img src="/assets/images/png/carousel2-3.png" alt="furniture img">
+            </ng-template> 
+          </owl-carousel-o>
+       </div>
+       <div class="news-offers position-relative">
+        <div class="heading-block mt-5 position-relative" style="z-index: 9;">
+            <h3 class="block-title text-center mb-0">SIGN UP FOR NEWS & OFFERS!</h3>
+            <h6 class="text-center text-black-50">Subscribe to the weekly newsletter for all the latest updates
+            </h6>
+        </div>
+       <div class="position-absolute img-right-bottom d-none d-lg-block">
+          <img src="/assets/images/png/right-bottom-img.png" alt="table img" class="img-fluid">
+       </div>
+        <form class="mt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mx-auto">
+                        <div class="email_id d-flex email_id justify-content-center">
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your email">
+                            <img src="/assets/images/svg-icon/right-arrow-email.svg" alt="right arrow">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+       </div>
+   </section>
+</main>

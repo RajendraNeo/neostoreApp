@@ -1,0 +1,53 @@
+* {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    // font-size: 1rem;
+    font-family: 'Gotham';
+    font-weight: 300;
+    overflow-x: hidden;
+    --smoothScroll: .04;
+    transition: opacity .6s ease-in .6s;
+    scroll-behavior: smooth;
+}
+
+a,
+li {
+    text-decoration: none ;
+    list-style-type: none;
+}
+
+[type=reset],
+[type=submit],
+button,
+html [type=button] {
+    outline: none;
+}
+
+button {
+    border: none;
+    outline: none ;
+}
+
+// .container{
+//     max-width: 1270px;
+//     padding: 0 1.5rem;
+// }
+
+// img {
+//     max-width: 100%;
+// }
+
+

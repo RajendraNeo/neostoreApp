@@ -1,0 +1,36 @@
+<div class="login">
+    <h4 class="text-center login__title mb-5">Log in</h4>
+    <div class="row">
+        <div class="col-12">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="mb-2">
+                  <label for="exampleInputEmail1" class="form-label font-14">Email</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="youremail@address.com" formControlName="email">
+                  <small class="form-text text-danger" *ngIf="email.errors?.['required'] && (email.touched || email.dirty)">
+                    Email is Required.
+                  </small>
+                  <small class="form-text text-danger" *ngIf="email.errors?.['email'] && (email.touched || email.dirty)">
+                    Please Enter Valid Email
+                  </small>
+                </div>
+                <div class="mb-5">
+                  <label for="exampleInputPassword1" class="form-label font-14">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
+                  <small class="form-text text-danger" *ngIf="password.errors?.['required'] && (password.touched || password.dirty)">
+                    Password is Required.
+                  </small>
+                  <small class="form-text text-danger" *ngIf="password.errors?.['minlength'] || password.errors?.['maxlength'] && (password.touched || password.dirty)">
+                    Password should be at least 6 and at the max 15 characters long.
+                  </small>
+                  <div class="form-text text-end text-decoration-underline forget-password-link" routerLink="/auth/forget-password">Forget Password</div>
+                </div>
+                <div class="text-center mb-4">
+                    <button type="submit" class="btn btn--red w-75" [disabled]="loginForm.invalid">Continue</button>
+                </div>
+                <div class="sign-up-link text-center">
+                    <span class="me-1">New to  NeoSTORE?</span><a class="sign-up-anchor" routerLink="/auth/registration">Sign up</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
