@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-
+  private myCart=new Subject<any>();
   constructor() { }
 
   productItemList=[
@@ -72,4 +73,12 @@ export class ProductService {
       pdDiscountPrice:42.00,
     },
   ]
+
+  addToCart(data:any){
+    this.myCart.next(data);
+  }
+
+  getData(){
+    return this.myCart;
+  }
 }

@@ -37,7 +37,7 @@
                     Please Enter Valid Email
                   </small>
                 </div>
-                <div class="mb-3">
+                <div class="mb-2">
                   <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" formControlName="password">
                   <small class="form-text text-danger" *ngIf="password.errors?.['required'] && (password.touched || password.dirty)">
                     Password is Required.
@@ -45,6 +45,28 @@
                   <small class="form-text text-danger" *ngIf="password.errors?.['minlength'] || password.errors?.['maxlength'] && (password.touched || password.dirty)">
                     Password should be at least 6 and at the max 15 characters long.
                   </small>
+                </div>
+                <div class="mb-2">
+                    <input type="text" class="form-control" placeholder="Enter Your Number" formControlName="contactNo">
+                    <small class="form-text text-danger" *ngIf="contactNo.errors?.['required'] && (contactNo.touched || contactNo.dirty)">
+                        Contact Number is Required.
+                    </small>
+                    <small class="form-text text-danger" *ngIf="contactNo.errors?.['pattern'] && (contactNo.touched || contactNo.dirty)">
+                        Please, Enter 10 digit Mobile Number
+                    </small>
+                </div>
+                <div class="mb-2">
+                    <div class="form-check form-check-inline">
+                        <input id="male" type="radio" class="form-check-input" value="male" name="gender" formControlName="gender">
+                        <label class="form-check-label" for="male">Male</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input id="female" type="radio" class="form-check-input" value="female" name="gender" formControlName="gender">
+                        <label class="form-check-label" for="female">Female</label>
+                     </div>
+                     <small class="form-text text-danger" *ngIf="gender.errors?.['required'] && (gender.touched || gender.dirty)">
+                        Gender is Required.
+                    </small>
                 </div>
                 <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1" >
@@ -59,7 +81,7 @@
                 <div class="sign-up-link text-center">
                     <span class="me-1">Already have an account?</span><a class="sign-up-anchor" routerLink="/auth/login">Log In</a>
                 </div>
-              </form>
+            </form>
         </div>
     </div>
 </div>

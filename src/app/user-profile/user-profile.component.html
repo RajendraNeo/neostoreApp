@@ -1,0 +1,40 @@
+<app-header></app-header>
+<section>
+    <div class="container">
+        <h4 class="text-center my-3">User Profile</h4>
+        <form>
+            <ng-container>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-12 mb-3">
+                      <label for="firstName">First Name</label>
+                      <input type="text" readonly class="form-control" placeholder="First Name" [value]="firstName" name="firstName">
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 mb-3">
+                        <label for="secondName">Lase Name</label>
+                        <input type="text" readonly class="form-control" placeholder="First Name" [value]="secondName" name="secondName">
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 mb-3">
+                        <label for="email">Email</label>
+                        <input type="text" readonly class="form-control" placeholder="First Name" [value]="email" name="email">
+                      </div>
+                      <div class="col-lg-4 col-md-6 col-12 mb-3">
+                          <label for="mobile">Lase Name</label>
+                          <input type="number" readonly class="form-control" placeholder="First Name" [value]="mobile" name="mobile">
+                      </div>
+                      <div class="col-lg-4 col-md-6 col-12" style="margin: auto 0;">
+                        <label class="me-3">Gender</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" disabled="gender == 'male'? true : false" type="radio" name="inlineRadioOptions" id="male" [checked]="gender == 'male'">
+                            <label class="form-check-label" for="male">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" disabled="gender == 'female'? true : false" type="radio" name="inlineRadioOptions" id="female" [checked]="gender == 'female'">
+                            <label class="form-check-label" for="female">Female</label>
+                        </div>
+                      </div>
+                  </div>
+            </ng-container>
+          </form>
+    </div>
+</section>
+

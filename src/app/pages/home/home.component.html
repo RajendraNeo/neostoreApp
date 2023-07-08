@@ -4,7 +4,7 @@
        <div class="container">
         <owl-carousel-o [options]="customOptions">
             <ng-template carouselSlide>
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-md-5 banner">
                         <h2 class="banner__text">Furniture
                            <span class="d-block">2022</span>
@@ -17,11 +17,13 @@
                             <button class="btn btn--red">Shop now</button>
                         </div>
                     </div>
-                    <div class="col-md-7"></div>
+                    <div class="col-md-7">
+                        <img src="../../../assets/images/png/neo-banner.png" alt="neo-banner">
+                    </div>
                 </div>
             </ng-template>  
             <ng-template carouselSlide>
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-md-5 banner">
                         <h2 class="banner__text">Furniture
                            <span class="d-block">2022</span>
@@ -34,11 +36,13 @@
                             <button class="btn btn--red">Shop now</button>
                         </div>
                     </div>
-                    <div class="col-md-7"></div>
+                    <div class="col-md-7">
+                        <img src="../../../assets/images/png/neo-banner.png" alt="neo-banner">
+                    </div>
                 </div>
             </ng-template>  
             <ng-template carouselSlide>
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-md-5 banner">
                         <h2 class="banner__text">Furniture
                            <span class="d-block">2022</span>
@@ -51,11 +55,13 @@
                             <button class="btn btn--red">Shop now</button>
                         </div>
                     </div>
-                    <div class="col-md-7"></div>
+                    <div class="col-md-7">
+                        <img src="../../../assets/images/png/neo-banner.png" alt="neo-banner">
+                    </div>
                 </div>
             </ng-template>  
             <ng-template carouselSlide>
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-md-5 banner">
                         <h2 class="banner__text">Furniture
                            <span class="d-block">2022</span>
@@ -68,7 +74,9 @@
                             <button class="btn btn--red">Shop now</button>
                         </div>
                     </div>
-                    <div class="col-md-7"></div>
+                    <div class="col-md-7">
+                        <img src="../../../assets/images/png/neo-banner.png" alt="neo-banner">
+                    </div>
                 </div>
             </ng-template>  
         </owl-carousel-o>
@@ -161,6 +169,13 @@
                                      <i class="icon-star-icon me-1"></i>
                                      <i class="icon-star-icon me-1"></i>
                                  </div>
+                                 <!-- <star-rating [value]="item.star"
+                                            [totalstars]="5"
+                                            checkedcolor="#BB0100"
+                                            uncheckedcolor="black" 
+                                            size="24px" 
+                                            [readonly]="true">
+                                 </star-rating> -->
                              </div>
                          </figcaption>
                     </figure>
@@ -277,13 +292,20 @@
                                     <img class="img-fluid" src="{{item.image}}" alt="{{item.heading}}">
                                 </div>
                                 <div class="ps-2 product-desp">
-                                    <span class="mb-2 d-block">
+                                    <!-- <span class="mb-2 d-block">
                                         <i class="icon-star-icon me-1"></i>
                                         <i class="icon-star-icon me-1"></i>
                                         <i class="icon-star-icon me-1"></i>
                                         <i class="icon-star-icon me-1"></i>
                                         <i class="icon-star-icon me-1"></i>
-                                    </span>
+                                    </span> -->
+                                    <star-rating [value]="item.star"
+                                            [totalstars]="5"
+                                            checkedcolor="#BB0100"
+                                            uncheckedcolor="black" 
+                                            size="24px" 
+                                            [readonly]="true">
+                                    </star-rating>
                                     <h6>{{item.heading}}</h6>
                                     <p><span class="text-decoration-line-through">{{ item.oldPrice | currency : 'INR'}}</span> {{ item.newPrice | currency : 'INR'}}</p>
                                     <div class="d-flex">
@@ -300,6 +322,42 @@
                     </div>
                 </div>
            </div>
+           <!-- <div class="bestSellers mb-5">
+            <div class="heading-block">
+                <h3 class="block-title text-center mb-0">Top Rated Products</h3>
+                <p class="block-para text-center">Sitewide Discounts & Savings of up to 25%     </p>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-4" *ngFor="let item of topRatedProducts">
+                    <div class="card border-0 mb-4">
+                        <div class="card-img-top d-flex align-items-center">
+                            <div>
+                                <img class="img-fluid" [src]="item.image" alt="{{item.name}}">
+                            </div>
+                            <div class="ps-2 product-desp">
+                                <span class="mb-2 d-block">
+                                    <i class="icon-star-icon me-1"></i>
+                                    <i class="icon-star-icon me-1"></i>
+                                    <i class="icon-star-icon me-1"></i>
+                                    <i class="icon-star-icon me-1"></i>
+                                    <i class="icon-star-icon me-1"></i>
+                                </span>
+                                <h6>{{item.name}}</h6>
+                                <p><span class="text-decoration-line-through">{{ item.price | currency : 'INR'}}</span> {{ item.price | currency : 'INR'}}</p>
+                                <div class="d-flex">
+                                    <div class="border p-2 me-2">
+                                        <img src="/assets/images/svg-icon/heart-icon.svg" alt="heart icon" class="img-fluid">
+                                    </div>
+                                    <div class="border p-2">
+                                        <img src="/assets/images/svg-icon/u-icon.svg" alt="heart icon" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           </div> -->
        </div>
    </section>
    <section class="column-padding mb-0">

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { HomeService } from 'src/app/services/home.service';
+import { ProfileService } from 'src/app/services/profile.service';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,8 @@ export class HomeComponent implements OnInit {
   public budget:any=[];
   public bestSeller:any=[];
   public ourBlog:any=[];
-  constructor(private _homeService:HomeService) { }
+  public topRatedProducts:any=[];
+  constructor(private _homeService:HomeService, private _getPro:ProfileService) { }
 
   ngOnInit(): void {
     this.trend=this._homeService.trending;
@@ -21,6 +23,10 @@ export class HomeComponent implements OnInit {
     this.budget=this._homeService.budget;
     this.bestSeller=this._homeService.bestSeller;
     this.ourBlog=this._homeService.blog;
+   this._homeService.topRatedProducts().subscribe((res:any)=>{
+    this.topRatedProducts=res.topRatedProducts;
+    console.log(this.topRatedProducts)
+   })
   }
 
   //carousel start

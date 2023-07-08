@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RatingModule } from 'ng-starrating';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 
 
@@ -14,13 +16,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RatingModule,
+    CarouselModule,
   ],
   exports:[
     HeaderComponent,
     FooterComponent,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RatingModule,
+    CarouselModule,
   ]
 })
 export class SharedModule { }

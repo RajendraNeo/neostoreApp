@@ -11,7 +11,23 @@
             .nav-link{
                 @include fontsize(14px, 300, $text-dark-color);
                 line-height: 17px;
+                cursor: pointer;
             }
         }
+    }
+    .cart-badge{
+        position: absolute;
+        top: -10px;
+        right: -20px;
+        background: $primary;
+        color: $color-white;
+        padding: 5.3px;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
     }
 }

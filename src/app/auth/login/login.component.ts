@@ -2,7 +2,8 @@ import { Router } from '@angular/router';
 import { AuthService } from './../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-
+import { ProfileService } from 'src/app/services/profile.service';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -10,7 +11,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
   responseData:any;
-  constructor(private _login:AuthService, private _router:Router) { }
+  constructor(private _login:AuthService, private _router:Router,private toastr: ToastrService, private _profileService:ProfileService) { }
 
   ngOnInit(): void {
   }
@@ -22,8 +23,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit(){
     this._login.userLogin(this.loginForm.value).subscribe(res=>{
-      alert("Login success");
-      console.log(res);
+      this.toastr.success(res.message)
       if(res !=null){
         this.responseData=res;
         localStorage.setItem("token", this.responseData.token);
@@ -32,8 +32,7 @@ export class LoginComponent implements OnInit {
       }
     },
     err=>{
-      console.log(err);
-      alert("something wrong");
+      this.toastr.error('Please Enter Correct Credentials');
     })
     console.log(this.loginForm.value);
   }

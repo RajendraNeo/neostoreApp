@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class HomeService {
 
-  constructor() { }
+  constructor(private _http:HttpClient) { }
 
   trending = [
     {
@@ -86,36 +87,42 @@ export class HomeService {
       heading: 'White Wooden Chair',
       oldPrice: '8000',
       newPrice: '6000',
+      star:4.2
     },
     {
       image: '/assets/images/png/best-seller-2.png',
       heading: 'White Wooden Chair',
       oldPrice: '8000',
       newPrice: '6000',
+      star:3.8
     },
     {
       image: '/assets/images/png/best-seller-3.png',
       heading: 'White Wooden Chair',
       oldPrice: '8000',
       newPrice: '6000',
+      star:4.6
     },
     {
       image: '/assets/images/png/best-seller-4.png',
       heading: 'White Wooden Chair',
       oldPrice: '8000',
       newPrice: '6000',
+      star:3.5
     },
     {
       image: '/assets/images/png/best-seller-5.png',
       heading: 'White Wooden Chair',
       oldPrice: '8000',
       newPrice: '6000',
+      star:4.5
     },
     {
       image: '/assets/images/png/best-seller-6.png',
       heading: 'White Wooden Chair',
       oldPrice: '8000',
       newPrice: '6000',
+      star:3.2
     },
   ];
 
@@ -139,4 +146,9 @@ export class HomeService {
       desc: 'A maximalist space is interesting to look at. Contrast and color are everything.',
     },
   ];
+
+  topRatedProducts(){
+   return this._http.get("https://nameless-savannah-21991.herokuapp.com/getDashboard");
+  }
+  
 }

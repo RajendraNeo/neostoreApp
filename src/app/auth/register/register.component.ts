@@ -22,8 +22,8 @@ export class RegisterComponent implements OnInit {
     secondName: new FormControl("", [Validators.required, Validators.minLength(3), Validators.pattern("[a-zA-Z].*")]),
     email: new FormControl("", [Validators.required, Validators.email]),
     password: new FormControl("", [Validators.required, Validators.minLength(6), Validators.maxLength(15)]),
-    contactNo: new FormControl("8459621234"),
-    gender: new FormControl("male")
+    contactNo: new FormControl("",[Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]),
+    gender: new FormControl("", [Validators.required])
     // iAgree: new FormControl(true, Validators.requiredTrue)
   });
 
@@ -36,9 +36,9 @@ export class RegisterComponent implements OnInit {
         console.log(err.message);
       },
    });
-  //  this._router.navigate(['/auth/login'])
+   this._router.navigate(['/auth/login'])
     console.log(this.registerForm.value);
-    // this.registerForm.reset();
+    this.registerForm.reset();
   }
 
   get firstName():FormControl{
@@ -57,7 +57,11 @@ export class RegisterComponent implements OnInit {
     return this.registerForm.get("password") as FormControl;
   }
 
-  // get terms():FormControl{
-  //   return this.registerForm.get("terms") as FormControl;
-  // }
+  get contactNo():FormControl{
+    return this.registerForm.get("contactNo") as FormControl;
+  }
+
+  get gender():FormControl{
+    return this.registerForm.get("gender") as FormControl;
+  }
 }

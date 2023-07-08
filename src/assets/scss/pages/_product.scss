@@ -68,3 +68,30 @@
         }
     }
 }
+
+
+
+.product-tabs{
+    .nav-pills {
+        .nav-link{
+            color: $secondary;
+            font-weight: bolder;
+            &.active {
+                color: $color-black;
+                font-weight: bolder;
+                border-bottom: 2px solid $color-black;
+                border-radius: 0;
+                background: none;
+            }
+        }
+        .show {
+            >.nav-link {
+                color: $color-black;
+                font-weight: bolder;
+                border-bottom: 2px solid $color-black;
+                border-radius: 0;
+                background: none;
+            }
+        }
+    }
+}

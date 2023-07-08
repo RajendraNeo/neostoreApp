@@ -7,6 +7,7 @@ import { AuthComponent } from './auth.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+import { VarifyPasswordComponent } from './varify-password/varify-password.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { ForgetPasswordComponent } from './forget-password/forget-password.compo
     AuthComponent,
     LoginComponent,
     RegisterComponent,
-    ForgetPasswordComponent
+    ForgetPasswordComponent,
+    VarifyPasswordComponent
   ],
   imports: [
     CommonModule,
