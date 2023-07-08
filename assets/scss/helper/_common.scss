@@ -1,0 +1,47 @@
+.font-15{
+    font-size: rem(15);
+}
+.font-14{
+    font-size: rem(14);
+}
+.w-85{
+    width: 85%;
+    //  @include breakpoint(mobile-max) {
+    //     width: 100%;
+    // }
+}
+.bg-red{
+    background-color: $primary;
+}
+.column-padding{
+    margin: rem(90) 0;
+}
+.title{
+    @include fontsize(30px, 700, $primary);
+    line-height: rem(45);
+    letter-spacing: rem(0.5);
+}
+.block-title{
+    @include fontsize(30px, 700, $text-dark-color);
+    line-height: rem(40);
+    text-transform: uppercase;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.block-para{
+    @include fontsize(16px, 500, $secondary);
+    line-height: 20px;
+    position: relative;
+    &:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        width: 10%;
+        height: 1.3px;
+        bottom: 0;
+        margin-bottom: -17.5px;
+        background: #000000;
+        transform: translateX(-50%);
+    }
+}

@@ -1,0 +1,263 @@
+.bg-banner{
+    // height: calc(100vh - 133px);
+    // background-image: url('../../../assets/images/png/banner.png');
+    background-color: #faefe9;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+    // max-height: 800px;
+    // min-height: 600px;
+    .banner{
+        &__text{
+            font-weight: 400;
+            position: relative;
+            padding-left: 20px;
+            padding-top: 110px;
+            margin-bottom: 35px;
+            &:before{
+                content: "";
+                position: absolute;
+                height: 100px;
+                width: 4px;
+                background: $color-black;
+                left: 0;
+            }
+        }
+        &__middleText{
+            @include fontsize(20px, 700, $color-black);
+        }
+        &__lightText{
+            @include fontsize(70px, 300, $color-black);
+            margin: rem(35) 0;
+        }
+    }
+}
+.show-department{
+    .icon-container{
+        padding: 36px 59px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: 0.5px solid $border-light;
+        transition: all 2s ease;
+        i{
+            font-size: rem(68);
+            color: $secondary;
+            margin-bottom: rem(12);
+        }
+        h5{
+            color: $secondary;
+        }
+        &.active, &:hover{
+            // transform: scaleY(1.1);
+            background: $primary;
+            i{
+                color: $color-white;
+            }
+            h5{
+                color: $color-white;
+            }
+        }
+    }
+}
+.trending{
+    &__block{
+        .figure{
+            .figure-caption{
+                span{
+                    @include fontsize(14px, 500, $text-dark-color);
+                    line-height: 16px;
+                }
+            }
+        }
+    }
+}
+.specail-offer{
+    &__items{
+        h5{
+            @include fontsize(20px, 500, $text-dark-color2); 
+            line-height: 24px;
+        }
+        h6{
+            @include fontsize(20px, 500, $text-red-color);
+        }
+        .available-in span{
+            @include fontsize(14px, 500, $text-dark-color2); 
+        }
+    }
+    &.figure-caption{
+        background: #EDEDED;
+    }
+}
+
+.new_arrivals{
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 100%;
+     z-index: 1;
+     p{
+        font-weight: 500;
+        font-size: rem(12);
+        line-height: rem(14);
+     }
+     h6{
+        font-weight: 500;
+        font-size: rem(19);
+        line-height: rem(22);
+     }
+     a{
+        cursor: pointer;
+        text-decoration: underline;
+        font-weight: 500;
+        font-size: rem(14);
+     }
+}
+.setsForHome{
+    .sofaSets{
+        &__content{
+            position: absolute;
+            top: 114px;
+            left: -3px;
+            background: $primary;
+            width: 401px;
+            padding: 35px;
+            clip-path: polygon(80% 0, 100% 28%, 100% 100%, 0 100%, 0 0);
+            &::before{
+                content: "";
+                position: absolute;
+                background: #1b0080f2;
+                height: 20px;
+                width: 20px;
+                width: 18px;
+                height: 23.32px;
+                left: 2px;
+                top: -25px;
+                z-index: 99999999999 !important;
+            }
+            h5{
+                @include fontsize(14px, 500, $color-white);
+            }
+            h2{
+                @include fontsize(40px, 500, $color-white);
+            }
+            h4{
+                @include fontsize(18px, 500, $color-white);
+            }
+            a{
+                @include fontsize(14px, 500, $color-white);
+                text-decoration: underline;
+            }
+        }
+    }
+    .home-sets{
+        .discount_off{
+            background: $primary;
+            color: white;
+            font-weight: 500;
+            font-size: 14px;
+            padding: 2px;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+        }
+        h5{
+            @include fontsize(20px, 700, $text-dark-color2);
+            line-height: 24px;
+        }
+        p{
+            @include fontsize(14px, 700, #BFBFBF);
+            line-height: rem(19);
+        }
+    }
+}
+
+
+.product-desp{
+    h6, p{
+        @include fontsize(14px, 500, #282627);
+        line-height: 16px;
+    }
+    span{
+        color: #BFBFBF;
+    }
+}
+.ourBlog{
+    border: 1px solid #BFBFBF;
+    position: relative;
+    &__date{
+        position: absolute;
+        background: white;
+        width: 75px;
+        height: 75px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        left: 15px;
+        top: 15px;
+        .date{
+            @include fontsize(30px, 700, #282627);
+            line-height: 45px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .month{
+            @include fontsize(16px, 500, #282627);
+            line-height: 20px;
+            text-transform: uppercase;
+        }
+    }
+    &__content{
+        h5{
+            @include fontsize(13px, 500, $primary);
+            text-transform: uppercase;
+        }
+        h6{
+            @include fontsize(20px, 500, $text-dark-color);
+        }
+    }
+    .card-footer{
+        border-top: 0.5px solid #BFBFBF;
+        p{
+            @include fontsize(14px, 300, $color-black);
+            line-height: 17px;
+        }
+        a{
+            @include fontsize(14px, 500, $text-dark-color);
+            text-decoration: underline;
+        }
+    }
+}
+
+.news-offers{
+    .img-right-bottom{
+        right: 0;
+        bottom: 0px;
+        width: 433px;
+    }
+    .email_id{
+        input {
+           border: none; 
+           border-bottom: 1px solid $color-black;
+           border-radius: 0;
+           outline: none;
+           box-shadow: none;
+           padding: 0;
+        }
+        ::placeholder {
+            @include fontsize(20px, 300, #7F7F7F);
+            line-height: 20px;
+        }
+        img{
+            margin-left: -50px;
+        }
+    }
+}
