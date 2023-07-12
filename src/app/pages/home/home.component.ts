@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
     dots: false,
     navSpeed: 700,
     nav: true,
-    navText: ['<img src="/assets/images/svg-icon/left-arrow.svg"/>', '<img src="/assets/images/svg-icon/right-arrow.svg"/>'],
+    navText: ['<img src="assets/images/svg-icon/left-arrow.svg"/>', '<img src="assets/images/svg-icon/right-arrow.svg"/>'],
     responsive: {
       0: {
         items: 1
